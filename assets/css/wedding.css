@@ -5675,6 +5675,8 @@ input[type="button"].btn-block {
     font-size: smaller;
     text-align: left;
     border-style: none;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .phase-table tbody tr td {
@@ -5688,11 +5690,12 @@ input[type="button"].btn-block {
 }
 
 .phase-table .row-desc {
-    writing-mode: vertical-rl;
+    vertical-align: middle;
     text-orientation: mixed;
     text-align: center;
     color: white;
-    background-color: #06391c;
+    background-color: #263874;
+    width: 70px;
 }
 
 .phase-table img {
@@ -11827,7 +11830,7 @@ textarea.form-control {
 }
 
 .table.table-striped tbody tr:nth-child(odd) {
-    background: #c7cfc6;
+    background: #c5ceec;
 }
 
 .table.table-striped td,
@@ -11998,7 +12001,7 @@ textarea.form-control {
         height: 70vh;
         min-height: 300px;
         background-repeat: no-repeat;
-        /*background-size: 300% 100%;*/
+        background-size: 300% 100%;
         object-fit: contain;
     }
 }
@@ -12163,7 +12166,14 @@ textarea.form-control {
 }
 
 .p2 {
-    background: url(../imgs/xmas01.jpeg) no-repeat center center fixed;
+    background: url(../imgs/xmas02.jpeg) no-repeat center center fixed;
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .has-bg-overlay:before {
@@ -12669,7 +12679,7 @@ change the font-size of the links and position the close button again, so they d
     background: #5bae4c !important;
 }
 
-.whatsapp_dul {
+#whatsapp_dul {
     background: #5bae4c !important;
     border-color: #5bae4c !important;
 }
