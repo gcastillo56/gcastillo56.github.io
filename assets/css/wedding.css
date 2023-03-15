@@ -11998,7 +11998,8 @@ textarea.form-control {
         height: 70vh;
         min-height: 300px;
         background-repeat: no-repeat;
-        background-size: 300% 100%;
+        /*background-size: 300% 100%;*/
+        object-fit: contain;
     }
 }
 
@@ -12151,7 +12152,14 @@ textarea.form-control {
 }
 
 .p1 {
-    background: url(../imgs/c_Wedding.jpeg) no-repeat center center fixed;
+    background: url(../imgs/c_Wedding.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .p2 {
