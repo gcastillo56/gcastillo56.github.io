@@ -12155,25 +12155,23 @@ textarea.form-control {
 }
 
 .p1 {
-    background: url(../imgs/c_Wedding.jpeg);
-    background-position: center;
-    background-attachment: scroll;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url(../imgs/c_Wedding.jpeg) no-repeat center center fixed;
 }
 
 .p2 {
     background: url(../imgs/xmas02.jpeg) no-repeat center center fixed;
-    background-position: center;
-    background-attachment: scroll;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .sticky-pic {
+        background-position: center;
+        background-attachment: scroll;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 .has-bg-overlay:before {
