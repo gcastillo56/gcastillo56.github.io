@@ -5675,7 +5675,7 @@ input[type="button"].btn-block {
     font-size: smaller;
     text-align: left;
     border-style: none;
-    width: 70%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -12159,6 +12159,10 @@ textarea.form-control {
 }
 
 .p2 {
+    background: url(../imgs/collage.jpeg) no-repeat center center fixed;
+}
+
+.p3 {
     background: url(../imgs/xmas02.jpeg) no-repeat center center fixed;
 }
 
@@ -12688,8 +12692,8 @@ img.sticky-frame {
     position: sticky;
     /*top: -250px;*/
     top: -80vh;
-    margin-left: -50px;
-    width: 110%;
+    margin-left: -5px;
+    width: 100%;
     z-index: 20;
 }
 
