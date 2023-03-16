@@ -26,7 +26,8 @@ $(document).ready(function() {
         $(this).attr("target", "_blank");
     });
     $("#whatsapp").on("click", function() {
-        $(this).attr("href", "http://wa.me/+523334407261");
+        /*$(this).attr("href", "http://wa.me/+523334407261");*/
+        $(this).attr("href", "https://chat.whatsapp.com/C23xuv77zCQ2iBv2C2pmr4");
         $(this).attr("target", "_blank");
     });
 });
