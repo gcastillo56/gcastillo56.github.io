@@ -11725,6 +11725,9 @@ textarea.form-control {
     .navbar.custom-navbar.affix-top {
         background: #fff;
     }
+    .navbar.custom-navbar .nav-link {
+        color: #263874;
+    }
 }
 
 .navbar.custom-navbar.affix .nav-link {
