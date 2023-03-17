@@ -12866,6 +12866,7 @@ img.sticky-frame {
 .upload form {
     display: inline-block;
     padding: 15px;
+    visibility: hidden;
 }
 
 .upload form button {
@@ -12888,6 +12889,7 @@ img.sticky-frame {
     background: #fff;
     border-radius: 10px;
     border: 1px solid #263874;
+    margin: 10px;
 }
 
 .upload input[type=file]::file-selector-button {
@@ -12907,6 +12909,7 @@ img.sticky-frame {
 
 .upload .img-upload {
     visibility: hidden;
+    display: none;
 }
 
 .inputfile {

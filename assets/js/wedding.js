@@ -111,7 +111,7 @@ function uploadImage(data) {
             method: "PUT",
             headers: {
                 Accept: "application/vnd.github+json",
-                Authorization: `Bearer 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`,
+                Authorization: `Bearer ${{ process.env.REPO_KEY }}`,
             },
             body: JSON.stringify({
                 message: "upload image from api",
@@ -125,6 +125,7 @@ function insertImage(src) {
     const newImage = document.createElement("img");
     newImage.src = src;
     document.querySelector(".img").innerHTML = newImage.outerHTML;
+    document.getElementById("upload-form").style.visibility = "visible";
 }
 
 function getRandomName(type) {
@@ -192,6 +193,7 @@ window.onload = () => {
             document.querySelector(".log").innerHTML = message;
         });
     });
+    document.getElementById("upload-form").style.visibility = "hidden";
 
     handleImageChange((imageInfo) => {
         image = {
