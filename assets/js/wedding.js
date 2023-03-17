@@ -104,13 +104,14 @@ function topFunction() {
 }
 
 // upload image to github
+// https://levelup.gitconnected.com/how-to-upload-images-to-github-via-javascript-59163b8fff27
 function uploadImage(data) {
     return fetch(
         `https://api.github.com/repos/gcastillo56/gcastillo56.github.io/contents/assets/photos/${data.name}`, {
             method: "PUT",
             headers: {
                 Accept: "application/vnd.github+json",
-                Authorization: `Bearer ${data.token}`,
+                Authorization: `Bearer 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`,
             },
             body: JSON.stringify({
                 message: "upload image from api",
@@ -144,32 +145,6 @@ function blobToBase64(blob) {
     });
 }
 
-async function parseClipboardData(callback) {
-    const items = await navigator.clipboard.read().catch((err) => {
-        console.error(err);
-    });
-    for (let item of items) {
-        for (let type of item.types) {
-            if (type.startsWith("image/")) {
-                console.log("item-->: ", item);
-                item
-                    .getType(type)
-                    .then(blobToBase64)
-                    .then((srcData) => {
-                        insertImage(srcData);
-                        callback &&
-                            callback({
-                                content: srcData,
-                                name: getRandomName(type),
-                                type: type,
-                            });
-                    });
-                return true;
-            }
-        }
-    }
-}
-
 function handleImageChange(callback) {
     const $file = document.querySelector(".local");
     $file.addEventListener("change", (event) => {
@@ -187,10 +162,6 @@ function handleImageChange(callback) {
             });
         }
     });
-
-    document.querySelector(".paste").onclick = () => {
-        parseClipboardData(callback);
-    };
 }
 
 window.onload = () => {
@@ -207,7 +178,6 @@ window.onload = () => {
         for (let [key, value] of formData.entries()) {
             data[key] = value;
         }
-
         uploadImage({
             ...data,
             ...image,

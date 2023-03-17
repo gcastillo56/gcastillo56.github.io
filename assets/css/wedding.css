@@ -12862,3 +12862,71 @@ img.sticky-frame {
         width: 100%;
     }
 }
+
+.upload form {
+    display: inline-block;
+    padding: 15px;
+}
+
+.upload form button {
+    background-color: #263874;
+    border-color: #263874;
+    color: #fff;
+}
+
+.upload form button:hover {
+    background-color: #fff;
+    border-color: #263874;
+    color: #263874;
+}
+
+.upload input[type=file] {
+    width: 550px;
+    max-width: 100%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #263874;
+}
+
+.upload input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #263874;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.upload input[type=file]::file-selector-button:hover {
+    background: #0d45a5;
+}
+
+.upload .img-upload {
+    visibility: hidden;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus+label,
+.inputfile+label:hover {
+    background-color: red;
+}
